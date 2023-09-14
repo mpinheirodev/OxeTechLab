@@ -1,0 +1,33 @@
+
+.cardColaborador{
+    border-radius: 2px;
+    width: 280px;
+}
+
+.cardColaborador .card_header {
+    border-radius: 10px 10px 0 0;
+}
+
+.card_header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    bottom: -50px;
+}
+
+.cardColaborador .card_footer {
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 10px 10px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.cardColaborador .card_footer h4 {
+    color: #6278F7;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}

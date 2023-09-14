@@ -1,0 +1,21 @@
+
+.footer_area {
+    background-color: #6278F7;
+    width: 100vw;
+    margin-top: 2rem;
+    padding: 0 1rem 0 2rem;
+    background-image: url('../../assets/Rodape.png');
+    background-size: contain;
+    height: 250px;
+    display: flex;
+
+}
+
+.social_media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-left: 5rem;
+}
+
