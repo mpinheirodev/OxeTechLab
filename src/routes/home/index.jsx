@@ -4,11 +4,13 @@ import Banner from '../../Components/banner';
 import Form from '../../Components/form';
 import Team from '../../Components/Team';
 import Footer from '../../Components/footer';
+import './home.css'
+import Navbar from '../../Components/navbar';
 
 
 export default function Home() {
 
-const [colaboradores, setColaboradores] = useState([])
+  const [colaboradores, setColaboradores] = useState([])
 
   const AddColaborador = (colaborador) => {
     setColaboradores([...colaboradores, colaborador])
@@ -56,7 +58,7 @@ const [colaboradores, setColaboradores] = useState([])
 
   return (
     <div>
-
+      <Navbar />
       <Banner />
 
       <div className='container'>
@@ -71,6 +73,7 @@ const [colaboradores, setColaboradores] = useState([])
             colorCard={team.colorCard}
             colaboradores={colaboradores.filter(colaborador => colaborador.team === team.name)} />)}
       </div>
+
       <Footer />
     </div>
   )

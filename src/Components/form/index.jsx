@@ -20,7 +20,10 @@ function Form(props) {
       imagem: imagem,
       team: team
     })
-
+    setName('')
+    setCargo('')
+    setImagem('')
+    setTeam('')
   }
 
 

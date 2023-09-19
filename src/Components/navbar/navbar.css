@@ -1,0 +1,24 @@
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 1rem;    
+}
+
+.links {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-btn {
+    border-radius: .4rem;
+    background-color: #6278F7;
+    padding: .6rem;
+}
+
+.login-btn a {
+    color: #FFF;
+}
