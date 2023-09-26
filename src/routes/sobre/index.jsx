@@ -31,14 +31,14 @@ export default function Sobre() {
       <Navbar />
       <Banner />
       <div className="container">
-        {data.map(item) => {
+        {data.map((item) => {
           return(
             <div key={item.cell}>
               <p>{item.gender}</p>
               <p>{item.name.first}</p>
             </div>
           )
-        }}
+        })}
       </div>
       <Footer />
     </div>
