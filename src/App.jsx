@@ -5,6 +5,7 @@ import Home from './routes/home'
 import Sobre from './routes/sobre'
 import Contato from './routes/contato'
 import Login from './routes/login'
+import AuthProvider from './context/auth'
 
 
 
@@ -26,14 +27,16 @@ function App() {
     },
     {
       path: '/login',
-      element: <Login/>
+      element: <Login />
     }
   ])
 
 
 
   return (
-    <RouterProvider router={routes}/>
+    <AuthProvider>
+      <RouterProvider router={routes} />
+    </AuthProvider>
   )
 }
 
