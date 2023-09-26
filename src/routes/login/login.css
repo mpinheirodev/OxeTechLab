@@ -24,7 +24,14 @@
     border: 1px solid #6278F7;
 }
 
-.login-form button {
+.login-form .entrar {
     background-color: #6278F7;
     color: #FFF;
+}
+
+.cadastro{
+    background-color: #FFFFFF;
+    border: 1px solid #6278F7;
+    color: #6278F7;
+    width: 100%;
 }

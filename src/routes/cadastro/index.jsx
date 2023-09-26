@@ -56,7 +56,7 @@ export default function Cadastro() {
         <input type="text" onChange={addIdade} placeholder="Digite sua idade" />
         <label>Senha</label>
         <input type="password" onChange={addPassword} placeholder="Digite sua senha" />
-        <button type="submit">Cadastrar</button>
+        <button className="entrar" type="submit">Cadastrar</button>
       </form>
     </div>
   )

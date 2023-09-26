@@ -40,7 +40,8 @@ export default function Login() {
         <input type="text" onChange={addUser} placeholder="Digite seu usuário" />
         <label>Senha</label>
         <input type="password" onChange={addPassword} placeholder="Digite sua senha" />
-        <button type="submit">Entrar</button>
+        <button type="submit" className="entrar">Entrar</button>
+        <Link to="/cadastro"><button className="cadastro">Cadastrar</button></Link>
       </form>
     </div>
   )
