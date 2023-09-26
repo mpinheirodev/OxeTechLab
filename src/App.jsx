@@ -6,6 +6,7 @@ import Sobre from './routes/sobre'
 import Contato from './routes/contato'
 import Login from './routes/login'
 import AuthProvider from './context/auth'
+import Cadastro from './routes/cadastro'
 
 
 
@@ -28,6 +29,10 @@ function App() {
     {
       path: '/login',
       element: <Login />
+    },
+    {
+      path: '/cadastro',
+      element: <Cadastro />
     }
   ])
 

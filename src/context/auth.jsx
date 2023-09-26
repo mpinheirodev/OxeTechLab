@@ -1,28 +1,37 @@
 
 import React, { useState, useEffect, useContext, createContext } from "react";
 
-export const AuthContext = createContext();
+export const AuthContext = createContext({});
 
 
 export default function AuthProvider({children}){
 
 
-    const [user, setUser] = useState([
-        {
-            name: "Matheus",
-            email: "matheus@gmail.com",
-            idade: "26"
-        }
-    ])
+    const [user, setUser] = useState([])
+
     const [logged, setLogged] = useState(false)
 
-    function signIn(user, password){
+    const login = (usuario, password) => {
+        console.log(usuario, password);
+    }
 
+    const logout = () => {
+        console.log("logout");
+    }
+
+    const cadastro = (usuario, email, idade, password) => {
+
+        setUser({
+            nome: usuario,
+            email:email,
+            idade:idade,
+            password:password
+        })
     }
 
     return (
         <AuthContext.Provider value={logged}>
-            {children}
+            <>{children}</>
         </AuthContext.Provider>
     )
 }
