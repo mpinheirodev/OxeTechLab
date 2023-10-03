@@ -1,4 +1,4 @@
-import './CardApi.css'
+import './cardApi.css'
 
 
 export default function CardApi({foto, nome, idade, sexo, email}) {
