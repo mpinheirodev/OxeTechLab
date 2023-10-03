@@ -12,6 +12,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    border: .1rem solid #ffffff;
     position: relative;
     bottom: -50px;
 }
