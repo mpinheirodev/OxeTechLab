@@ -4,21 +4,23 @@ import Footer from "../../Components/footer"
 import Navbar from "../../Components/navbar"
 import { useContext, useEffect, useState } from "react"
 import axios from "axios"
+import CardApi from "../../Components/cardApi"
+import './sobre.css'
 
 
 export default function Sobre() {
 
   const [data, setDate] = useState([])
 
-  async function HandleFetch(){
+  async function HandleFetch() {
     await axios.get("https://randomuser.me/api/?results=20")
 
-    .then((response) => {
-      setDate(response.data.results)
-    })
-    .catch((error) => {
-      alert(error)
-    })
+      .then((response) => {
+        setDate(response.data.results)
+      })
+      .catch((error) => {
+        alert(error)
+      })
   }
 
   useEffect(() => {
@@ -30,13 +32,17 @@ export default function Sobre() {
     <div>
       <Navbar />
       <Banner />
-      <div className="container">
+      <div className="container sobre_area">
         {data.map((item) => {
-          return(
-            <div key={item.cell}>
-              <p>{item.gender}</p>
-              <p>{item.name.first}</p>
-            </div>
+          return (
+            <CardApi 
+              key={item.cell}
+              foto={item.picture.medium}
+              nome={item.name.first}
+              idade={item.dob.age}
+              email={item.email}
+              sexo={item.gender}
+            />
           )
         })}
       </div>

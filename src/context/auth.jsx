@@ -1,18 +1,24 @@
 
-import React, { useState, createContext } from "react";
+import { useState, createContext } from "react";
+import { signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebaseconnection.jsx';
 
 export const AuthContext = createContext({});
 
 
-export default function AuthProvider({children}){
+export default function AuthProvider({ children }) {
 
 
     const [user, setUser] = useState([])
 
-    const [logged, setLogged] = useState(false)
-
-    const login = (usuario, password) => {
-        console.log(usuario, password);
+    const login = async (usuario, password) => {
+        await signInWithEmailAndPassword(auth, usuario, password)
+            .then((userCredential) => {
+                console.log("LOGOU")
+            })
+            .catch((error) => {
+                console.log(error)
+            })
     }
 
     const logout = () => {
@@ -23,14 +29,25 @@ export default function AuthProvider({children}){
 
         setUser({
             nome: usuario,
-            email:email,
-            idade:idade,
-            password:password
+            email: email,
+            idade: idade,
+            password: password
         })
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                console.log("Usuário Cadastrado")
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+
+    function StorageUser(data) {
+        localStorage.setItem('User', JSON.stringify(data))
     }
 
     return (
-        <AuthContext.Provider value={logged}>
+        <AuthContext.Provider value={{ user, login, logout, cadastro }}>
             <>{children}</>
         </AuthContext.Provider>
     )

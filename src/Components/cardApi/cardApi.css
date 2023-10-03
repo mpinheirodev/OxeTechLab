@@ -1,0 +1,29 @@
+
+.card_api {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: auto;
+    padding: 0 1rem;
+    box-shadow: 4px 2px 2px 1px rgb(0 , 0, 0, 0.5);
+    border: .15rem solid #6278F7;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+.card_api img {
+    border-radius: 50%;
+    box-shadow: 0 2px 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+.img_perfil{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: .8rem .8rem 0 0;
+    background-color: #6278F7;
+}
