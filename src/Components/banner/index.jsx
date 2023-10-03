@@ -1,6 +1,6 @@
 import React from "react";
 import './banner.css'
-import bannerImg from '../../src/assets/HeaderHeader_total.png'
+import bannerImg from '../../assets/HeaderHeader_total.png'
 
 
 function Banner(){
